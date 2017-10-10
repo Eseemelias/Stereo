@@ -170,7 +170,7 @@ for x = 1:18
                             %Mean10 = mean2(tau10).*MeanMask;
                             %Mean20 = mean2(tau20).*MeanMask;
                             
-                            SumaTotal= [SumaTotal(1) + Mean(1) SumaTotal(2) + Mean(2)];
+                            %SumaTotal= [SumaTotal(1) + Mean(1) SumaTotal(2) + Mean(2)];
                             SumaTotal2 = [SumaTotal2(1) + MeanRec(1) SumaTotal2(2) + MeanRec(2)];
                             
                             Suma3 = [Suma3(1) + Mean3R(1) Suma3(2) + Mean3R(2)];
@@ -184,13 +184,13 @@ for x = 1:18
         end
     end
 end
-imshow(color_disparity_SG,disparityRange);  %Mostrar resultado
-title('SG');
+imshow(color_disparity_SG,disparityRange);  %Mostrar resultado ultimo calculo
+title('Resultado');
 MeanTau3=Suma3/cont;
 MeanTau5=Suma5/cont;
 MeanTau10=Suma10/cont;
 MeanTau20=Suma20/cont;
-MeanAverage = SumaTotal/cont;
+%MeanAverage = SumaTotal/cont;
 MeanAverage2 = SumaTotal2/cont;
 par = {'N° Imagenes','Mean Error','t=3','t=5','t=10','t=20'};
 Datos1= [cont,MeanAverage2(1), MeanTau3(1), MeanTau5(1), MeanTau10(1), MeanTau20(1)];
